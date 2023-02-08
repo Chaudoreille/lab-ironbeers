@@ -1,11 +1,11 @@
 <div>
     <ul>
     {{#each beers}}
+    {{log id}}
         <li>
-            <img src="{{image_url}}" alt="{{name}} image" class="beer-name">
-            <p class="beer-name">{{name}}</p>
-            <p class="beer-description">{{description}}</p>
-            <p class="beer-tagline">{{tagline}}</p>
+            <a href="/beer-{{this.id}}">
+                {{> beer this}}
+            </a>
         </li>
     {{/each}}
     </ul>
