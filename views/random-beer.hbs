@@ -1,0 +1,20 @@
+<div>
+    {{#with beer}}
+        {{#if image_url}}
+            <img src="{{image_url}}" alt="{{name}} image" class="beer-name">
+        {{else}}
+            <img src="images/beer.png" alt="Beer default image">
+        {{/if}}
+        <p class="beer-name">{{name}}</p>
+        <p class="beer-description">{{description}}</p>
+        <p class="beer-tagline">{{tagline}}</p>
+        <h3>Food Pairing</h3>
+        <ul>
+        {{#each food_pairing}}
+            <li>{{this}}</li>
+        {{/each}}
+        </ul>
+        <h3>Brewer's Tips</h3>
+        <p>{{brewers_tips}}</p>
+    {{/with}}
+</div>
